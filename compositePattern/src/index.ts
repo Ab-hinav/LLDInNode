@@ -1,5 +1,7 @@
 import {Directory, File} from './FileSystem';
+import { Number,Expression,Operation } from './Arithmetic';
 
+    // Example 1
     const movieDirectory:Directory = new Directory("Movies",[]);
     const moviewComedy:File = new File("Comedy", 12);
     movieDirectory.add(moviewComedy);
@@ -14,6 +16,12 @@ import {Directory, File} from './FileSystem';
     movieDirectory.add(songsDir);
 
     movieDirectory.ls();
+
+    // Example 2
+    const exp:Expression = new Expression(new Number(10),Operation.ADD,new Number(3));
+    const exp1:Expression = new Expression(exp,Operation.MULTIPLY,new Number(5));
+    console.log(exp1.evaluate());
+    
 
 
 
