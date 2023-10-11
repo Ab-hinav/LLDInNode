@@ -1,5 +1,5 @@
 {
-  "name": "chess",
+  "name": "compositePattern",
   "version": "1.0.0",
   "description": "lld version with node",
   "main": "dist/index.js",
