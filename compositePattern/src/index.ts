@@ -1,13 +1,19 @@
-import * as readline from 'readline';
+import {Directory, File} from './FileSystem';
 
+    const movieDirectory:Directory = new Directory("Movies",[]);
+    const moviewComedy:File = new File("Comedy", 12);
+    movieDirectory.add(moviewComedy);
+    const movieHorror:File = new File("Horror", 14);
+    movieDirectory.add(movieHorror);
+    const movieRomance:File = new File("Romance", 16);
 
-const r1 = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+    const songsDir:Directory = new Directory("Songs",[]);
+    const songLove:File = new File("Love", 10);
+    songsDir.add(songLove);
 
-r1.question('how are you?', (v) => {console.log('me',v)
-    r1.close();});
+    movieDirectory.add(songsDir);
+
+    movieDirectory.ls();
 
 
 

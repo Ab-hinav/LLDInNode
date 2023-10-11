@@ -1,9 +1,14 @@
-import * as readline from 'readline';
-const r1 = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-r1.question('how are you?', (v) => {
-    console.log('me', v);
-    r1.close();
-});
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var FileSystem_1 = require("./FileSystem");
+var movieDirectory = new FileSystem_1.Directory("Movies", []);
+var moviewComedy = new FileSystem_1.File("Comedy", 12);
+movieDirectory.add(moviewComedy);
+var movieHorror = new FileSystem_1.File("Horror", 14);
+movieDirectory.add(movieHorror);
+var movieRomance = new FileSystem_1.File("Romance", 16);
+var songsDir = new FileSystem_1.Directory("Songs", []);
+var songLove = new FileSystem_1.File("Love", 10);
+songsDir.add(songLove);
+movieDirectory.add(songsDir);
+movieDirectory.ls();
